@@ -9,6 +9,7 @@ public interface IHotelReservManager {
 	abstract boolean OutputError(String msg);
 	
 	abstract boolean Output(String msg);
+	abstract void OutputHints();
 	
 	
 }

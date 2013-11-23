@@ -43,4 +43,18 @@ public class HotelOutput implements IHotelOutput {
 		this._HotelFinder = _HotelFinder;
 	}
 
+	@Override
+	public void OutputHints() {
+		System.out.println("Usage:");
+		System.out.println("	<customer_type>: <date1>, <date2>, <date3>,");
+		System.out.println("Tips:");
+		System.out.println("	<customer_type>: Values should be Regular or Rewards");
+		System.out.println("	<date>: Dates must be formated as ddMMMyyyy(weekdays).");
+		System.out.println("	There must be a space between each date and customer_type");
+		System.out.println("Example:");
+		System.out.println("	Regular: 16Mar2009(mon), 17Mar2009(tues), 18Mar2009(wed)");
+		
+		
+	}
+
 }

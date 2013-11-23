@@ -112,4 +112,10 @@ public class HotelReservManager implements IHotelReservManager {
 		return true;
 	}
 
+	@Override
+	public void OutputHints() {
+		_HotelOutputObj.OutputHints();
+		
+	}
+
 }

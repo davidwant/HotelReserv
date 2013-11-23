@@ -18,6 +18,8 @@ public class HotelReserv {
 		
 		while (true){
 			
+			hotelReservManager.OutputHints();
+			
 			hotelReservManager.GetInput();
 			
 			hotelReservManager.GetCheapestHotel ();

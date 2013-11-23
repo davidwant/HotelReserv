@@ -16,5 +16,7 @@ public interface IHotelOutput {
 	boolean OutputResult();
 
 	void SetHotelFinder(IFindHotel _HotelFinder);
+	
+	void OutputHints();
 
 }
