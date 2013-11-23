@@ -2,7 +2,6 @@ package cn.com.davidwang.hotelreserv.test;
 
 import static org.junit.Assert.*;
 
-import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
@@ -12,7 +11,6 @@ import java.util.Map;
 
 import org.junit.Test;
 
-import cn.com.davidwang.hotelreserv.IHotelFactory;
 import cn.com.davidwang.hotelreserv.hotel.Hotel;
 import cn.com.davidwang.hotelreserv.hotel.HotelEnums;
 import cn.com.davidwang.hotelreserv.hotel.IHotel;

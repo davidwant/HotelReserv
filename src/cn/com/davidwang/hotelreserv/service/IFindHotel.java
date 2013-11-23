@@ -3,7 +3,6 @@
  */
 package cn.com.davidwang.hotelreserv.service;
 
-import java.util.List;
 import java.util.Map;
 
 import cn.com.davidwang.hotelreserv.IHotelReservManager;

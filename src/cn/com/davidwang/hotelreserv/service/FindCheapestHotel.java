@@ -42,7 +42,7 @@ public class FindCheapestHotel implements IFindHotel {
 		Hotel cheapestHotel = null;
 
 		while (iter.hasNext()) {
-			Entry entry = (Entry) iter.next();
+			Entry<String , IHotel> entry = (Entry<String , IHotel>) iter.next();
 			Object val = entry.getValue();
 
 			Hotel hotelObj = (Hotel) val;

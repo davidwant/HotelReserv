@@ -3,7 +3,6 @@
  */
 package cn.com.davidwang.hotelreserv.hotel;
 
-import java.lang.reflect.Array;
 
 /**
  * @author DavidWang
