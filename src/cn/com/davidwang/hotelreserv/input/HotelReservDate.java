@@ -1,8 +1,5 @@
 package cn.com.davidwang.hotelreserv.input;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
 
@@ -11,6 +8,7 @@ public class HotelReservDate {
 	private List<Date> reservDateList = null;
 
 	public HotelReservDate(String typeString, List<Date> datesList) {
+		reservTypeString = typeString;
 		reservDateList = datesList;
 	}
 

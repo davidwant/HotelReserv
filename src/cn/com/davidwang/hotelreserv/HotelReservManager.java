@@ -18,15 +18,15 @@ import cn.com.davidwang.hotelreserv.service.IFindHotel;
  */
 public class HotelReservManager implements IHotelReservManager {
 
-	private IHotelFactory _HotelFactoryObj;
+	private IHotelFactory _HotelFactoryObj = null;
 
-	private IHotelOutput _HotelOutputObj;
-	private IHotelInput _HotelInputObj;
+	private IHotelOutput _HotelOutputObj = null;
+	private IHotelInput _HotelInputObj = null;
 
-	private IFindHotel _HotelFinder;
+	private IFindHotel _HotelFinder = null;
 
 	// a list to store all hotels.
-	private Map<String, IHotel> _HotelsMap;
+	private Map<String, IHotel> _HotelsMap = null;
 
 	private boolean GenerateReservParts() {
 		// create factory

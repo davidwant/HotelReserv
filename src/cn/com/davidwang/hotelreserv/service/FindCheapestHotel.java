@@ -50,8 +50,8 @@ public class FindCheapestHotel implements IFindHotel {
 			float totalCost = 0f;
 
 			for (String dateType : reservDateType) {
-				totalCost += (HotelEnums.REGULAR_CUSTOMER == _HotelInput
-						.GetCustomerType()) ? hotelObj
+				totalCost += (_HotelInput.GetCustomerType()
+						.equalsIgnoreCase(HotelEnums.REGULAR_CUSTOMER)) ? hotelObj
 						.getRegularHotelRates(dateType) : hotelObj
 						.getRewardsHotelRates(dateType);
 			}
@@ -85,7 +85,7 @@ public class FindCheapestHotel implements IFindHotel {
 	/**
 	 * @return the resultString
 	 */
-	public String getResultString(){
+	public String getResultString() {
 		return resultString;
 	}
 

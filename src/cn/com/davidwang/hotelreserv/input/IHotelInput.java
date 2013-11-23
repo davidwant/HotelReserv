@@ -18,6 +18,8 @@ public interface IHotelInput {
 	void SetManager(IHotelReservManager mgr);
 
 	HotelReservDate GetInputDates();
+	
+	void SetInputDates(HotelReservDate reserv);
 
 	List<String> GetInputDatesType();
 

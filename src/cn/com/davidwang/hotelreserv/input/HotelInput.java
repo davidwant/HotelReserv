@@ -115,9 +115,9 @@ public class HotelInput implements IHotelInput {
 			java.util.Calendar cal = java.util.Calendar.getInstance();
 			cal.setTime(date);
 			int w = cal.get(java.util.Calendar.DAY_OF_WEEK) - 1;
-			if (0 <= w && 5 >= w) {
+			if (1 <= w && 5 >= w) {
 				dateTypeList.add(HotelEnums.WEEKDAYS);
-			} else if (6 == w || 7 == w) {
+			} else if (6 == w || 0 == w) {
 				dateTypeList.add(HotelEnums.WEEKENDS);
 			} else {
 				manager.OutputError("[ERROR] date format is not correct!");
@@ -130,6 +130,13 @@ public class HotelInput implements IHotelInput {
 	@Override
 	public String GetCustomerType() {
 		return reservDates.getReservTypeString();
+	}
+
+	@Override
+	public void SetInputDates(HotelReservDate reserv) {
+		// for unit test
+		this.reservDates = reserv;
+		
 	}
 
 }

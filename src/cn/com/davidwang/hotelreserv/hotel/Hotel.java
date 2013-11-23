@@ -170,10 +170,10 @@ public class Hotel implements IHotel {
 		if (null == _HotelRates) {
 			return 0f;
 		}
-		if (HotelEnums.WEEKDAYS == ratesType) {
-			return _HotelRates.get_RewardsCustomerRates()._WeekdayRates;
-		} else if (HotelEnums.WEEKENDS == ratesType) {
-			return _HotelRates.get_RewardsCustomerRates()._WeekendRates;
+		if (ratesType.equalsIgnoreCase(HotelEnums.WEEKDAYS)) {
+			return _HotelRates.get_RewardsCustomerRates().get_WeekdayRates();
+		} else if (ratesType.equalsIgnoreCase(HotelEnums.WEEKENDS)) {
+			return _HotelRates.get_RewardsCustomerRates().get_WeekendRates();
 		} else {
 			return 0f;
 		}
@@ -184,10 +184,10 @@ public class Hotel implements IHotel {
 		if (null == _HotelRates) {
 			return 0f;
 		}
-		if (HotelEnums.WEEKDAYS == ratesType) {
-			return _HotelRates.get_RegularCustomerRates()._WeekdayRates;
-		} else if (HotelEnums.WEEKENDS == ratesType) {
-			return _HotelRates.get_RegularCustomerRates()._WeekendRates;
+		if (ratesType.equalsIgnoreCase(HotelEnums.WEEKDAYS)) {
+			return _HotelRates.get_RegularCustomerRates().get_WeekdayRates();
+		} else if (ratesType.equalsIgnoreCase(HotelEnums.WEEKENDS)) {
+			return _HotelRates.get_RegularCustomerRates().get_WeekendRates();
 		} else {
 			return 0f;
 		}
