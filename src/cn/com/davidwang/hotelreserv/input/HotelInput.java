@@ -46,7 +46,7 @@ public class HotelInput implements IHotelInput {
 		}
 
 		for (int i = 1; i < text.length; i++) {
-			if (true == IsValidInput(text[i].trim() , dateContainer)) {
+			if (true == IsValidInput(text[i].trim(), dateContainer)) {
 			} else {
 				dateContainer.clear();
 				return false;
@@ -136,7 +136,7 @@ public class HotelInput implements IHotelInput {
 	public void SetInputDates(HotelReservDate reserv) {
 		// for unit test
 		this.reservDates = reserv;
-		
+
 	}
 
 }

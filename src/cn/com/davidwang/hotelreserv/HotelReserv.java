@@ -15,19 +15,15 @@ public class HotelReserv {
 	public static void main(String[] args) {
 		
 		IHotelReservManager hotelReservManager = new HotelReservManager();
+		hotelReservManager.OutputHints();
 		
 		while (true){
-			
-			hotelReservManager.OutputHints();
-			
-			hotelReservManager.GetInput();
-			
-			hotelReservManager.GetCheapestHotel ();
-			
-			hotelReservManager.OutputResult();
+			if(hotelReservManager.GetInput()){
+				if(hotelReservManager.GetCheapestHotel()){
+					hotelReservManager.OutputResult();
+				}
+			}
 		}
-		
-		
 	}
 
 	
