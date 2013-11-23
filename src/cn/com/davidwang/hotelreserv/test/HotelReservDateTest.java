@@ -59,30 +59,42 @@ public class HotelReservDateTest {
 	@Test
 	public void testGetReservTypeString() {
 		List<Date> datesList = new ArrayList<Date>();
-		Date date1 = new Date(2012, 3, 1);
-		Date date2 = new Date(2013, 12, 31);
-		datesList.add(date1);
-		datesList.add(date2);
+		SimpleDateFormat format = new SimpleDateFormat("ddMMyyyy");
+		try {
+			Date date1 = format.parse("01032012");
+			Date date2 = format.parse("31122013");
+			datesList.add(date1);
+			datesList.add(date2);
 
-		HotelReservDate reservDate = new HotelReservDate("Regular", datesList);
+			HotelReservDate reservDate = new HotelReservDate("Regular",
+					datesList);
 
-		assertEquals("Regular", reservDate.getReservTypeString());
+			assertEquals("Regular", reservDate.getReservTypeString());
+		} catch (Exception e) {
+
+		}
 
 	}
 
 	@Test
 	public void testSetReservTypeString() {
 		List<Date> datesList = new ArrayList<Date>();
-		Date date1 = new Date(2012, 3, 1);
-		Date date2 = new Date(2013, 12, 31);
-		datesList.add(date1);
-		datesList.add(date2);
+		SimpleDateFormat format = new SimpleDateFormat("ddMMyyyy");
+		try {
+			Date date1 = format.parse("01032012");
+			Date date2 = format.parse("31122013");
+			datesList.add(date1);
+			datesList.add(date2);
 
-		HotelReservDate reservDate = new HotelReservDate("Regular", datesList);
+			HotelReservDate reservDate = new HotelReservDate("Regular",
+					datesList);
 
-		reservDate.setReservTypeString("Rewards");
+			reservDate.setReservTypeString("Rewards");
 
-		assertEquals("Rewards", reservDate.getReservTypeString());
+			assertEquals("Rewards", reservDate.getReservTypeString());
+		} catch (Exception e) {
+
+		}
 	}
 
 }
