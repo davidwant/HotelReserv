@@ -4,6 +4,7 @@
 package cn.com.davidwang.hotelreserv;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import cn.com.davidwang.hotelreserv.hotel.Hotel;
@@ -116,6 +117,16 @@ public class HotelReservManager implements IHotelReservManager {
 	public void OutputHints() {
 		_HotelOutputObj.OutputHints();
 		
+	}
+
+	@Override
+	public List<String> GetInputStringContainer() {
+		return _HotelInputObj.GetInputStringContainer();
+	}
+
+	@Override
+	public boolean TranslateInput(String input) {
+		return _HotelInputObj.TranslateDate(input);
 	}
 
 }

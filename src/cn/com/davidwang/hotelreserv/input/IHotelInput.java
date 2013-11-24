@@ -16,6 +16,8 @@ public interface IHotelInput {
 	boolean GetInput();
 	
 	void SetManager(IHotelReservManager mgr);
+	
+	IHotelReservManager GetManager();
 
 	HotelReservDate GetInputDates();
 	
@@ -24,5 +26,9 @@ public interface IHotelInput {
 	List<String> GetInputDatesType();
 
 	String GetCustomerType();
+	
+	boolean TranslateDate(String inputString);
+	
+	List<String> GetInputStringContainer();
 
 }

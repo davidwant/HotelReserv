@@ -22,8 +22,14 @@ public class HotelInput implements IHotelInput {
 
 	private HotelReservDate reservDates = null;
 	private static IHotelReservManager manager = null;
+	
+	private List<String> inputStringContainer =null;
+	
+	//constructor
+	public HotelInput(){
+		inputStringContainer = new ArrayList<String>();
+	}
 
-	// unit test needed
 	private boolean DoTranslateDates(String inputString) {
 		List<Date> dateContainer = new ArrayList<Date>();
 
@@ -87,7 +93,11 @@ public class HotelInput implements IHotelInput {
 			BufferedReader br = new BufferedReader(new InputStreamReader(
 					System.in));
 			String inputStr = br.readLine();
-			ret = DoTranslateDates(inputStr);
+			// ret = DoTranslateDates(inputStr);
+			
+			inputStringContainer.add(inputStr);
+			
+			ret = true;
 
 		} catch (Exception e) {
 			return false;
@@ -137,6 +147,21 @@ public class HotelInput implements IHotelInput {
 		// for unit test
 		this.reservDates = reserv;
 
+	}
+
+	@Override
+	public boolean TranslateDate(String inputString) {
+		return DoTranslateDates(inputString);
+	}
+
+	@Override
+	public List<String> GetInputStringContainer() {
+		return inputStringContainer;
+	}
+
+	@Override
+	public IHotelReservManager GetManager() {
+		return manager;
 	}
 
 }

@@ -1,5 +1,7 @@
 package cn.com.davidwang.hotelreserv;
 
+import java.util.List;
+
 public interface IHotelReservManager {
 	
 	abstract boolean GetInput();
@@ -10,6 +12,10 @@ public interface IHotelReservManager {
 	
 	abstract boolean Output(String msg);
 	abstract void OutputHints();
+	
+	abstract List<String> GetInputStringContainer();
+	
+	abstract boolean TranslateInput(String input);
 	
 	
 }
