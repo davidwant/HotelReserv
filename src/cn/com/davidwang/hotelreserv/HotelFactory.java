@@ -3,7 +3,6 @@
  */
 package cn.com.davidwang.hotelreserv;
 
-import cn.com.davidwang.hotelreserv.input.HotelInput;
 import cn.com.davidwang.hotelreserv.input.HotelInputFromFile;
 import cn.com.davidwang.hotelreserv.input.IHotelInput;
 import cn.com.davidwang.hotelreserv.output.HotelOutput;
